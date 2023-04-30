@@ -10,7 +10,7 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural='categories'
         
-    def _str_(self): 
+    def __str__(self):
         return self.name
     
 class Product(models.Model):
@@ -29,11 +29,11 @@ class Product(models.Model):
     
     price = models.DecimalField(max_digits=4, decimal_places=2)
     
-    #image = models.ImageField(upload_to='images/') 
+    image = models.ImageField(upload_to='images/') 
     
     class Meta:
         verbose_name_plural='products'
         #product (1)
         
-    def _str_(self): 
+    def __str__(self):
         return self.title      

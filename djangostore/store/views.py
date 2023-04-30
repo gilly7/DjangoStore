@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 def store(request):
     pass
-    return render(request, 'store.html')
+    return render(request, 'store/store.html')
