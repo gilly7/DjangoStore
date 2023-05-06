@@ -19,7 +19,7 @@ def categories(request):
     return {'all_categories': all_categories} 
 
 
-def list_category(request, ):
+def list_category(request, category_slug ):
     category = get_object_or_404(Product, slug=category_slug)
     
     products = Product.objects.filter(category=category)
