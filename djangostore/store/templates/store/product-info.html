@@ -82,8 +82,7 @@
 </div>
 
 <script>
-  $(document).on("click", "#add-button"),
-    function (e) {
+  $(document).on('click', '#add-button'), function (e) {
       e.preventDefault();
 
       $.ajax({
@@ -91,8 +90,8 @@
         url: '{% url "card-add" %}',
         data: {
           product_id: $('#add-button').val(),
-          product_quantity: $('#select.option:selected').text(),
-          csrfmiddlewaretoken: "{{csrf-token}}",
+          product_quantity: $('#select option:selected').text(),
+          csrfmiddlewaretoken: "{{csrf_token}}",
           action: "post"
         },
 
