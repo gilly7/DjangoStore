@@ -13,10 +13,11 @@ def cart_summary(request):
     return render(request, 'cart/cart-summary.html')
 
 def cart_add(request):
-    
+    print(request.POST.get('product_id'))
+   
     cart= Cart(request)
     
-    if request.POST.get('action') == 'POST':
+    if request.POST.get('action') == 'post':
         
         product_id = int(request.POST.get('product_id'))
         
