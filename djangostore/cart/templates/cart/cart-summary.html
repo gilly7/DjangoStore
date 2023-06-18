@@ -174,7 +174,7 @@
         url: "{% url 'cart-update' %}",
         data: {
             'product_id': $(this).data('index'),
-            'product_quantity': $('#select' + theproductid + 'option:selected').text(),
+            'product_quantity': $('#select' + theproductid + ' option:selected').text(),
             'csrfmiddlewaretoken': "{{ csrf_token }}",
             'action': 'post'
         },
